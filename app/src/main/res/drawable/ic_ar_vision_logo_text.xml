@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="24dp"
+    android:viewportWidth="100"
+    android:viewportHeight="24">
+
+    <!-- Placeholder for a more complex logo. This is just text. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,7 L10,17 L12,17 L12,7 L10,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,7 L20,17 L22,17 L22,7 L20,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,7 L30,17 L32,17 L32,7 L30,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,7 L40,17 L42,17 L42,7 L40,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,7 L50,17 L52,17 L52,7 L50,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,7 L60,17 L62,17 L62,7 L60,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,7 L70,17 L72,17 L72,7 L70,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,7 L80,17 L82,17 L82,7 L80,7 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90,7 L90,17 L92,17 L92,7 L90,7 Z" />
+</vector>

@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Outer Ring -->
+    <path
+        android:strokeColor="#40FFFFFF" 
+        android:strokeWidth="2"
+        android:pathData="M48,12 A36,36 0 1,1 47.9,12"/>
+
+    <!-- Inner Ring -->
+    <path
+        android:strokeColor="#80FFFFFF" 
+        android:strokeWidth="2"
+        android:pathData="M48,24 A24,24 0 1,1 47.9,24"/>
+
+    <!-- Camera Icon in a circle -->
+    <path
+        android:fillColor="@color/purple_500"
+        android:pathData="M48,32 A16,16 0 1,1 48,64 A16,16 0 1,1 48,32"/>
+
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M48,42m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M48,45m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" />
+
+</vector>

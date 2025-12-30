@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "911129603300",
+    "project_id": "ai-arvision",
+    "storage_bucket": "ai-arvision.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911129603300:android:e6fcaa59e79cfa592190f1",
+        "android_client_info": {
+          "package_name": "com.example.arvision"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAqWyPicYfTsK2U-wYWyHRI9Fm4GMnQQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

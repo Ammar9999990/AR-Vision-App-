@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#22FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="#44FFFFFF"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/history_item_icon_background"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/history_item_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/history_item_icon_background"
+            app:layout_constraintEnd_toEndOf="@+id/history_item_icon_background"
+            app:layout_constraintStart_toStartOf="@+id/history_item_icon_background"
+            app:layout_constraintTop_toTopOf="@+id/history_item_icon_background"
+            app:tint="@android:color/white"
+            tools:src="@drawable/ic_scan_24" />
+
+        <TextView
+            android:id="@+id/history_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/history_item_confidence"
+            app:layout_constraintStart_toEndOf="@+id/history_item_icon_background"
+            app:layout_constraintTop_toTopOf="@+id/history_item_icon_background"
+            tools:text="Laptop" />
+
+        <TextView
+            android:id="@+id/history_item_confidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#00FF00"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/history_item_title"
+            app:layout_constraintEnd_toStartOf="@+id/history_item_delete_button"
+            app:layout_constraintStart_toEndOf="@+id/history_item_title"
+            tools:text="94%" />
+
+        <TextView
+            android:id="@+id/history_item_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/history_item_delete_button"
+            app:layout_constraintStart_toStartOf="@+id/history_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/history_item_title"
+            tools:text="Electronic Device" />
+
+        <TextView
+            android:id="@+id/history_item_timestamp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/history_item_delete_button"
+            app:layout_constraintStart_toStartOf="@+id/history_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/history_item_subtitle"
+            tools:text="2 hours ago" />
+
+        <ImageButton
+            android:id="@+id/history_item_delete_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#AAAAAA" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

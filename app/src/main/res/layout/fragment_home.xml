@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="96dp">
+
+        <include
+            android:id="@+id/home_top_bar"
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/home_greeting_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/orbitron"
+            android:text="Hello, Explorer 👋"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_top_bar" />
+
+        <TextView
+            android:id="@+id/home_greeting_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/orbitron"
+            android:text="What would you like to discover today?"
+            android:textColor="#B0B0B0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/home_greeting_title"
+            app:layout_constraintStart_toStartOf="@+id/home_greeting_title"
+            app:layout_constraintTop_toBottomOf="@+id/home_greeting_title" />
+
+        <!-- Start AR Scan Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/home_start_scan_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_greeting_subtitle"
+            app:strokeColor="#333333"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_camera_scan_ring" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/orbitron"
+                    android:text="Start AR Scan"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/orbitron"
+                    android:text="Point your camera at any object"
+                    android:textColor="#B0B0B0" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Features -->
+        <TextView
+            android:id="@+id/home_features_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/orbitron"
+            android:text="FEATURES"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_start_scan_card" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:columnCount="2"
+            app:layout_constraintEnd_toEndOf="@+id/home_start_scan_card"
+            app:layout_constraintStart_toStartOf="@+id/home_start_scan_card"
+            app:layout_constraintTop_toBottomOf="@+id/home_features_title"
+            app:useDefaultMargins="true">
+
+            <!-- CORRECTED: All attributes applied directly, broken styles REMOVED -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/feature_object_detection"
+                style="@style/FeatureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal">
+                <LinearLayout style="@style/FeatureCardContent">
+                    <ImageView style="@style/FeatureCardIcon" android:src="@drawable/ic_object_detection"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Object Detection"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Identify objects with AI"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/feature_live_text"
+                style="@style/FeatureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal">
+                <LinearLayout style="@style/FeatureCardContent">
+                    <ImageView style="@style/FeatureCardIcon" android:src="@drawable/ic_live_text"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Live Text Select"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Extract text from anywhere"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/feature_distance_measure"
+                style="@style/FeatureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal">
+                <LinearLayout style="@style/FeatureCardContent">
+                    <ImageView style="@style/FeatureCardIcon" android:src="@drawable/ic_distance_measure"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Distance Measure"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Measure real-world objects"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/feature_translation"
+                style="@style/FeatureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal">
+                <LinearLayout style="@style/FeatureCardContent">
+                    <ImageView style="@style/FeatureCardIcon" android:src="@drawable/ic_translation"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Translation"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Translate text instantly"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/feature_history"
+                style="@style/FeatureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal">
+                <LinearLayout style="@style/FeatureCardContent">
+                    <ImageView style="@style/FeatureCardIcon" android:src="@drawable/ic_history_24"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="History"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="View past scans"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/feature_ai_insights"
+                style="@style/FeatureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal">
+                <LinearLayout style="@style/FeatureCardContent">
+                    <ImageView style="@style/FeatureCardIcon" android:src="@drawable/ic_ai_insights"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="AI Insights"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/orbitron"
+                        android:text="Get smart suggestions"
+                        android:textColor="#B0B0B0"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

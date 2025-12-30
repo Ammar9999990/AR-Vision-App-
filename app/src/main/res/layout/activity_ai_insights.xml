@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AiInsightsActivity">
+
+    <TextView
+        android:id="@+id/ai_insights_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Your AI Insights"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ai_insights_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ai_insights_title"
+        android:layout_marginTop="4dp"
+        android:text="A summary of your recent activity."
+        android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+    <ProgressBar
+        android:id="@+id/ai_insights_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ai_insights_subtitle"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/ai_insights_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textAppearance="?attr/textAppearanceBody1"
+            tools:text="Here's what you've been up to this week!\n\nYou've been quite the explorer, with Object Detection being your most used feature." />
+    </ScrollView>
+
+</RelativeLayout>
